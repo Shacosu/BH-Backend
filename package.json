@@ -1,0 +1,30 @@
+{
+  "name": "bookhunter",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node-dev src/index.ts",
+    "client": "cd client && node --run dev",
+    "postinstall": "prisma generate",
+    "dev": "concurrently \"ts-node-dev src/index.ts\" \"node --run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "concurrently": "^8.2.2",
+    "morgan": "^1.10.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "prisma": "^5.18.0",
+    "use-debounce": "^10.0.3"
+  }
+}
